@@ -6,4 +6,6 @@
 
 ## Usage
 Необходимо заменить данный путь на путь установки 1с-bitrix.
-	``$_SERVER["DOCUMENT_ROOT"] = "/home/bitrix/www";
+```php
+$_SERVER["DOCUMENT_ROOT"] = "/home/bitrix/www";
+```
