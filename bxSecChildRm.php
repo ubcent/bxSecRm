@@ -21,7 +21,7 @@ CModule::IncludeModule("iblock");
 
 $sections_list = CIBlockSection::GetTreeList(
 	array(), 
-    array('IBLOCK_ID' => 4, "NAME" => $name), true
+    array('IBLOCK_ID' => 4), true
 );
 
 while($arResult = $sections_list->GetNext()) {
