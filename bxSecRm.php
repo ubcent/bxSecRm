@@ -23,11 +23,9 @@ $sections_list = CIBlockSection::GetTreeList(
 	array(), 
     array('IBLOCK_ID' => 4, "NAME" => $name), true
 );
-echo "<pre>";
+
 while($arResult = $sections_list->GetNext()) {
-	$nav = CIBlockSection::GetNavChain(4, $arResult["ID"]);
-	$nav->ExtractFields("nav_");
-	if($nav_ID == 59 && CIBlockSection::GetSectionElementsCount($arResult["ID"]) == 0) {
+	if(CIBlockSection::GetSectionElementsCount($arResult["ID"]) == 0) {
 		if(!CIBlockSection::Delete($arResult["ID"])){
 			echo $arResult["NAME"] . " removed" . "\n";
 		}
